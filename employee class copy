@@ -1,0 +1,16 @@
+#import EmployeeClass as e
+import PayrollDeductionClass as p
+
+employee = EmployeeClass('Jimmy Smith',58475,"Information Systems",'Developer',6800)
+deduction1 = p('food court', '8/14/2022',22.50,39119)
+deduction2 = p('gift contribution', '8/12/2022', 25.00, 58475)
+deduction3= p('food court', '8/17/2022', 15.25, 21547)
+deduction4= p('vending machine', '8/22/2022', 3.00, 58475)
+deduction5= p('vending machine', '8/5/2022', 2.75, 58475)
+
+print("*** Employee Pay ***")
+print("Name:",employee.Name())
+print("ID number:", employee.EmployeeID())
+print("Department:", employee.Department())
+print("Gross Pay: $",float(employee.Salary()),sep='')
+print("Net Pay: $",employee.Salary()-deduction2.Deduction_charge()-deduction4.Deduction_charge()-deduction5.Deduction_charge(),sep='')
