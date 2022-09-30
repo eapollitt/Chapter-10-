@@ -14,3 +14,65 @@ print("ID number:", employee.EmployeeID())
 print("Department:", employee.Department())
 print("Gross Pay: $",float(employee.Salary()),sep='')
 print("Net Pay: $",employee.Salary()-deduction2.Deduction_charge()-deduction4.Deduction_charge()-deduction5.Deduction_charge(),sep='')
+
+
+
+
+
+
+class Employees: 
+    def __init__(self,n,id,dep,j,sal):
+         self.__name = n
+         self.__employee_id = id
+         self.__department = dep
+         self.__job = j
+         self.__salary = sal
+
+    def Name(self):
+        return self.__name 
+
+    def EmployeeID(self):
+        return self.__employee_id
+
+    def Department(self):
+        return self.__department 
+    
+    def Job(self):
+        return self.__job 
+
+    def Salary(self):
+        return self.__salary 
+
+
+
+
+
+class Payroll:
+    def __init__(self,desc,date,charge,id):
+        self.__description = desc
+        self.__Date = date
+        self.__Charge = charge
+        self.__employee_id = id
+    
+    def Deduction_description(self):
+        return self.__description
+    
+    def Deduction_date(self):
+        return self.__Date
+    
+    def Deduction_charge(self):
+        return self.__Charge
+    
+    def Deduction_employee_id(self):
+        return self.__employee_id
+
+
+
+
+#one employee and five instances from the payroll deduction class
+#comparing to see if the employee ids match jimmy smith and deduct that from his total pay monthly salary and if id doesnt then dont deduct it
+#use a for loop to go through th ids 
+#hard code the values in the instance side 
+#class all accessor methods (get methods )
+#calculations can be done in the program side 
+# 
